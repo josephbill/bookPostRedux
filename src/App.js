@@ -8,6 +8,9 @@ import {
 
 import { Navbar } from './app/Navbar'
 
+import {AddBooksForm} from './features/books/AddBooksForm'
+import { BooksList } from './features/books/BooksList'
+
 function App() {
   return (
     <Router>
@@ -18,9 +21,16 @@ function App() {
             exact
             path="/"
             render={() => (
-              <section>
-                <h2>Welcome to the Redux Essentials example app!</h2>
-              </section>
+              // starter code 
+              // <section>
+              //   <h2>Welcome to the Redux Essentials example app!</h2>
+              // </section>
+
+              //update on adding the fragment 
+              <React.Fragment>
+                <AddBooksForm/>
+                <BooksList/>
+              </React.Fragment>
             )}
           />
           <Redirect to="/" />
